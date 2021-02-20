@@ -1,4 +1,4 @@
-import Index from "../views/index.vue";
+import Index from "@/views/index.vue";
 
 export const routes = [
 
@@ -12,6 +12,6 @@ export const routes = [
     {
         path: "/login",
         name: "login",
-        component: () => import("../views/Login.vue")
+        component: () => import("@/views/Login.vue")
     }
 ]
