@@ -3,21 +3,13 @@
 		<h2>
 			首页 - by ctcode
 		</h2>
-		<CtButton>传统按钮</CtButton>
-		<CtButtonJsx>JSX按钮</CtButtonJsx>
+		<!-- 加载中状态组件 -->
+		<a-spin/>
 	</div>
 </template>
 
 <script>
-import CtButton from "@/components/CtButton.vue";
-import CtButtonJsx from "@/components/CtButtonJsx";
-
-export default {
-    components: {
-		CtButton,
-        CtButtonJsx,
-    },
-};
+export default {};
 </script>
 
 <style>
