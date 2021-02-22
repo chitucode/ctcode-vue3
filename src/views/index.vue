@@ -9,7 +9,17 @@
 </template>
 
 <script>
-export default {};
+export default {
+	created () {
+		this.$request({
+			url: "https://api.github.com/users",
+		}).then(res => {
+			console.log(res);
+		}).catch(err => {
+			console.log(err);
+		})
+	}
+}
 </script>
 
 <style>

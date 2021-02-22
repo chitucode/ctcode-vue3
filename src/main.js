@@ -8,14 +8,12 @@ import router from "@/router/index"
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 
-// 按需导入
-// import { Spin } from 'ant-design-vue';
+// 导入setup
+import setup from "@/setup/index"
 
 // 创建app
-const app = createApp(App);
+export const app = createApp(App);
 app.use(router);
 app.use(Antd);
-
-// app.use(Spin)
-
+app.use(setup)
 app.mount("#app");
