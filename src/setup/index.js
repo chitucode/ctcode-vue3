@@ -2,8 +2,8 @@ import HttpRequest from "@/utils/httpRequest"
 
 function setupRequest(app) {
     const httpRequest = new HttpRequest({
-        // 你的axios基准路径
-        baseURL: "http://127.0.0.1:5000"
+        // 你的axios基准路径, https://vitejs.dev/guide/env-and-mode.html
+        baseURL: import.meta.env.MODE === "development" ? "" : "http://127.0.0.1:5000"
     });
 
     // 自定义异步请求错误处理
