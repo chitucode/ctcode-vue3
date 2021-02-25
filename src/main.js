@@ -11,9 +11,13 @@ import 'ant-design-vue/dist/antd.css';
 // 导入setup
 import setup from "@/setup/index"
 
+// 导入store
+import store from "@/store/index"
+
 // 创建app
 export const app = createApp(App);
 app.use(router);
 app.use(Antd);
 app.use(setup)
+app.use(store)
 app.mount("#app");
