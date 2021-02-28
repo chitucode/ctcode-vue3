@@ -1,7 +1,9 @@
 <template>
   <div>
     <h2>登录页 - by ctcode</h2>
-    <a-form layout="inline" :model="formData" @finish="onFinish(formData)">
+    <!-- 显示用户真名 -->
+    <p class="realname">{{store.state.user.info.realname}}</p>
+    <a-form layout="inline" :model="formData">
       <a-form-item>
         <a-input
           v-model:value="formData.username"
@@ -15,7 +17,7 @@
         placeholder="密码" />
       </a-form-item>
       <a-form-item>
-        <a-button type="primary" html-type="submit"> 登录 </a-button>
+        <a-button type="primary" html-type="submit" @click.prevent="onFinish(formData)"> 登录 </a-button>
       </a-form-item>
     </a-form>
   </div>
@@ -55,6 +57,7 @@ export default {
     return {
       formData,
       onFinish,
+      store
     };
   }
 };
